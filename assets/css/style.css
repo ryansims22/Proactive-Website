@@ -1154,21 +1154,22 @@ body.nav-open {
 
 .contact-info h2 {
   font-family: var(--serif);
-  font-size: 64.8px;
+  font-size: 40px;
   font-weight: 400;
-  line-height: 1.05;
+  line-height: 1.15;
   letter-spacing: 0;
   color: var(--dark-brown);
-  max-width: 9em;
+  max-width: 14em;
 }
 
 .contact-address,
-.contact-phone {
+.contact-phone,
+.contact-email {
   display: flex;
   align-items: center;
   gap: 0.5em;
   font-family: var(--sans);
-  font-size: 16.8px;
+  font-size: 22px;
   font-weight: 700;
   font-style: normal;
   line-height: 1.4;
@@ -1177,21 +1178,23 @@ body.nav-open {
 }
 
 .contact-address svg,
-.contact-phone svg {
+.contact-phone svg,
+.contact-email svg {
   flex: none;
-  width: 17.5px;
-  height: 17.5px;
+  width: 22px;
+  height: 22px;
   fill: currentColor;
 }
 
-.contact-phone {
+.contact-phone,
+.contact-email {
   font-weight: 800;
   color: var(--dark-brown);
   margin-top: 20px;
   transition: color 0.3s var(--ease);
 }
 
-.contact-phone:hover {
+.contact-email:hover {
   color: var(--sage-text);
 }
 
@@ -1321,7 +1324,7 @@ body.nav-open {
     width: 100%;
   }
   .contact-info h2 {
-    font-size: 44px;
+    font-size: 32px;
   }
   .badges .container {
     justify-content: center;
