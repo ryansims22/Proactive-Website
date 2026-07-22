@@ -58,6 +58,20 @@
     });
   }
 
+  /* ---- Click-to-load Google Map (nothing loads from Google until asked) ---- */
+  var mapLoad = document.querySelector(".map-load");
+  if (mapLoad) {
+    mapLoad.addEventListener("click", function () {
+      var iframe = document.createElement("iframe");
+      iframe.src = mapLoad.getAttribute("data-map-src");
+      iframe.title = mapLoad.getAttribute("data-map-title") || "Map";
+      iframe.setAttribute("allowfullscreen", "");
+      iframe.setAttribute("loading", "lazy");
+      iframe.setAttribute("referrerpolicy", "no-referrer-when-downgrade");
+      mapLoad.replaceWith(iframe);
+    });
+  }
+
   /* ---- Contact form ---- */
   var form = document.querySelector("#contact-form");
   if (form) {
