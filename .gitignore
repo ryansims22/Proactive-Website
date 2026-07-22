@@ -1,0 +1,6 @@
+# Local backups — not for the public repo
+site-backup/
+proactive-at-content-backup.md
+
+# Claude Code local settings
+.claude/
