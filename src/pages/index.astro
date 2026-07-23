@@ -1,0 +1,192 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+
+const schema = {
+  "@context": "https://schema.org",
+  "@type": "AccountingService",
+  "@id": "https://proactive-at.com/#business",
+  name: "Proactive Accounting & Tax",
+  url: "https://proactive-at.com/",
+  description:
+    "San Diego area CPA and accounting service providing year-round tax planning, tax preparation, bookkeeping, and business advisory for small business owners.",
+  image: "https://proactive-at.com/assets/img/IMG_Home-Ryan_1200x1500webp.webp",
+  telephone: "+1-760-205-0625",
+  address: {
+    "@type": "PostalAddress",
+    streetAddress: "3605 Ocean Ranch Blvd, Suite 202",
+    addressLocality: "Oceanside",
+    addressRegion: "CA",
+    postalCode: "92056",
+    addressCountry: "US",
+  },
+  geo: { "@type": "GeoCoordinates", latitude: 33.2094, longitude: -117.3125 },
+  areaServed: { "@type": "AdministrativeArea", name: "San Diego County, CA" },
+  founder: {
+    "@type": "Person",
+    "@id": "https://proactive-at.com/meet-ryan-sims/#ryan-sims",
+    name: "Ryan D. Sims",
+    jobTitle: "CPA, EA, MBA",
+    url: "https://proactive-at.com/meet-ryan-sims/",
+  },
+  hasOfferCatalog: {
+    "@type": "OfferCatalog",
+    name: "Tax and accounting services",
+    itemListElement: [
+      { "@type": "Offer", itemOffered: { "@type": "Service", name: "Tax Preparation & Compliance" } },
+      { "@type": "Offer", itemOffered: { "@type": "Service", name: "Proactive Tax Planning" } },
+      { "@type": "Offer", itemOffered: { "@type": "Service", name: "Accounting & Bookkeeping" } },
+      { "@type": "Offer", itemOffered: { "@type": "Service", name: "Business Advisory & Entity Structuring" } },
+    ],
+  },
+};
+---
+<BaseLayout
+  title="Home - Proactive Accounting & Tax"
+  description="Your business deserves a tax partner. And not just in April. Proactive Accounting & Tax is your San Diego area based CPA and accounting service providing tax planning, bookkeeping, and advisory for small business owners."
+  path="/"
+  ogDescription="Your business deserves a tax partner. And not just in April."
+  ogImage="https://proactive-at.com/assets/img/IMG_Home-Woman_960x1200.webp"
+>
+  <Fragment slot="head">
+    <script is:inline type="application/ld+json" set:html={JSON.stringify(schema)} />
+  </Fragment>
+
+  <!-- ======================= Hero ======================= -->
+  <section class="hero">
+    <div class="container">
+      <h1>Your business deserves a tax partner. <br>And not just in April.</h1>
+      <p class="hero-sub">Proactive Accounting &amp; Tax is your San Diego area based CPA and accounting service providing tax planning, bookkeeping, and advisory for small business owners who want fewer surprises, clear answers, and a calm, capable expert in their corner.</p>
+      <div class="hero-actions">
+        <a href="/our-approach/" class="btn-text">Learn More</a>
+        <a href="/contact/" class="btn btn--lg">Get Started</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================= Problem ======================= -->
+  <section class="split">
+    <div class="container">
+      <div class="split-col">
+        <p class="eyebrow">Get started today</p>
+        <h2>Taxes shouldn&rsquo;t feel stressful.</h2>
+        <div class="rich-text">
+          <p>Many small business owners in the San Diego area don&rsquo;t struggle because they&rsquo;re irresponsible &mdash; they struggle because their CPA or accountant only shows up once a year.</p>
+          <ul>
+            <li>Questions go unanswered.</li>
+            <li>Bookkeeping and tax planning don&rsquo;t connect.</li>
+            <li>Everything feels reactive &mdash; and rushed.</li>
+          </ul>
+          <p>That leads to anxiety, missed deductions, and unpleasant tax surprises.</p>
+          <p>It doesn&rsquo;t have to be that way.</p>
+        </div>
+      </div>
+      <div class="split-col split-media">
+        <img src="/assets/img/IMG_Home-Woman_960x1200.webp" alt="Business owner reviewing her finances with confidence" width="480" height="600" loading="lazy">
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================= Statement banner ======================= -->
+  <section class="banner">
+    <div class="container">
+      <h2>A More Proactive Way to work with a San Diego Area CPA.</h2>
+    </div>
+  </section>
+
+  <!-- ======================= Intro prose ======================= -->
+  <section class="prose-section">
+    <div class="rich-text">
+      <p>At Proactive Accounting &amp; Tax, we provide accounting and tax services in the San Diego area for business owners who want clarity &mdash; not confusion &mdash; and a relationship built on communication, planning, and trust.</p>
+      <p>We don&rsquo;t just handle tax preparation.</p>
+      <p>We provide ongoing tax planning and accounting support so you can make better decisions before they become expensive ones.</p>
+      <p>Because you need a trusted partner who plans ahead, discusses business strategy clearly, and is by your side &mdash; good times and tough.</p>
+    </div>
+  </section>
+
+  <!-- ======================= Services ======================= -->
+  <section class="services">
+    <div class="container">
+      <h2 class="section-heading">Complete Business Tax Solutions for Small Business</h2>
+      <div class="services-grid">
+        <div class="service">
+          <div class="service-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5"/><path d="M12 11v6"/><path d="M14.5 12.5c0-.8-1.1-1.5-2.5-1.5s-2.5.7-2.5 1.5S10.6 14 12 14s2.5.7 2.5 1.5-1.1 1.5-2.5 1.5-2.5-.7-2.5-1.5"/></svg>
+          </div>
+          <h3>Tax Preparation &amp; Compliance</h3>
+          <p>Accurate, timely tax preparation handled by an experienced San Diego area CPA, without last-minute panic.</p>
+        </div>
+        <div class="service">
+          <div class="service-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M8 3v4M16 3v4M3 10h18M8 14h2M14 14h2M8 17.5h2M14 17.5h2"/></svg>
+          </div>
+          <h3>Year-Round Tax Planning</h3>
+          <p>Proactive tax planning for small business owners looking to legally reduce their tax liability and plan ahead.</p>
+        </div>
+        <div class="service">
+          <div class="service-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><path d="M2 5.5A2.5 2.5 0 0 1 4.5 3H11v16H4.5A2.5 2.5 0 0 0 2 21.5z"/><path d="M22 5.5A2.5 2.5 0 0 0 19.5 3H13v16h6.5a2.5 2.5 0 0 1 2.5 2.5z"/></svg>
+          </div>
+          <h3>Accounting &amp; Bookkeeping</h3>
+          <p>End-to-end financial management &mdash; bookkeeping handled in-house or through trusted partners, always connected to your tax strategy.</p>
+        </div>
+        <div class="service">
+          <div class="service-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/><path d="M3 13h18"/><path d="M12 12v2"/></svg>
+          </div>
+          <h3>Business Advisory &amp; Structuring</h3>
+          <p>Guidance on LLCs, S-Corps, deductions, and business decisions that affect your taxes.</p>
+        </div>
+      </div>
+
+      <div class="services-outro">
+        <h2 class="section-heading">Proactive Accounting &amp; Tax Takes A Different Approach</h2>
+        <div class="rich-text">
+          <p>Many CPA firms in the San Diego area focus just on filing returns.</p>
+          <p>We focus on helping business owners understand their numbers, plan ahead, and stay compliant &mdash; without being talked down to or ignored.</p>
+          <p>If you&rsquo;re looking for a small business CPA professional in the San Diego area who offers year-round support, clear communication, and proactive tax strategy &mdash; this is it. Because we believe your business deserves thoughtful, proactive attention. And a tax professional who shows up as a partner for your business growth.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================= Bio ======================= -->
+  <section class="split bio">
+    <div class="container">
+      <div class="split-col">
+        <p class="eyebrow">A trusted peer &mdash; not a distant expert.</p>
+        <h2 class="split-heading">Hi, I&rsquo;m Ryan.</h2>
+        <div class="rich-text">
+          <p>I&rsquo;m a CPA, a tax strategist, and a small business owner &mdash; which means I understand both the technical side and the reality of running a business.</p>
+          <p>My job is simple but important. I am here to:</p>
+          <ul>
+            <li>Keep you compliant</li>
+            <li>Reduce your legal tax burden</li>
+            <li>Help you feel confident about your financial decisions</li>
+          </ul>
+          <p>Clients come to me because they want straight answers, reliable communication, and a tax partner they can trust long-term.</p>
+        </div>
+        <a href="/meet-ryan-sims/" class="text-link">
+          Meet Ryan Sims
+          <svg viewBox="0 0 12 20" aria-hidden="true"><path d="M2 2l8 8-8 8" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+      </div>
+      <div class="split-col split-media">
+        <img src="/assets/img/IMG_Home-Ryan_1200x1500webp.webp" alt="Ryan Sims, CPA" width="600" height="750" loading="lazy">
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================= Great fit checklist ======================= -->
+  <section class="fit">
+    <div class="container">
+      <h2 class="section-heading">You're A Great Fit for Proactive Accounting &amp; Tax If You</h2>
+      <ul class="checklist">
+        <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12.5l5 5L20 6.5"/></svg><span>Own a small or growing business</span></li>
+        <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12.5l5 5L20 6.5"/></svg><span>Feel behind, unsure, or overwhelmed with finances</span></li>
+        <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12.5l5 5L20 6.5"/></svg><span>Want one place for bookkeeping and tax strategy</span></li>
+        <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12.5l5 5L20 6.5"/></svg><span>Value clarity, responsiveness, and planning</span></li>
+        <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12.5l5 5L20 6.5"/></svg><span>Are done dealing with CPAs who ghost or overcomplicate things</span></li>
+      </ul>
+    </div>
+  </section>
+</BaseLayout>
