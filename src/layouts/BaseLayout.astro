@@ -1,0 +1,60 @@
+---
+// Base layout: <head> boilerplate, shared header/footer, site JS.
+//
+// Props:
+//   title          — <title> and og:title
+//   description    — meta description
+//   path           — page path with trailing slash (e.g. "/contact/"); builds canonical + og:url
+//   ogDescription  — og:description (defaults to description)
+//   ogImage        — absolute og:image URL (optional)
+//   noindex        — true for pages that should not be indexed
+//
+// Extra per-page <head> content (e.g. JSON-LD) goes in <Fragment slot="head">.
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+
+const SITE = "https://proactive-at.com";
+const {
+  title,
+  description,
+  path,
+  ogDescription = description,
+  ogImage,
+  noindex = false,
+} = Astro.props;
+const canonical = SITE + path;
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{title}</title>
+  <meta name="description" content={description}>
+  <link rel="canonical" href={canonical}>
+  {noindex && <meta name="robots" content="noindex, follow">}
+  <meta property="og:type" content="website">
+  <meta property="og:title" content={title}>
+  <meta property="og:description" content={ogDescription}>
+  <meta property="og:url" content={canonical}>
+  <meta property="og:site_name" content="Proactive Accounting &amp; Tax">
+  {ogImage && <meta property="og:image" content={ogImage}>}
+  <link rel="stylesheet" href="/assets/css/fonts.css">
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <slot name="head" />
+</head>
+<body>
+
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <Header currentPath={path} />
+
+  <main id="main-content">
+    <slot />
+  </main>
+
+  <Footer />
+
+  <script is:inline src="/assets/js/main.js"></script>
+</body>
+</html>
